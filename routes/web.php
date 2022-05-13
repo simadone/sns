@@ -32,6 +32,8 @@ Route::get('/added', 'Auth\RegisterController@added');
 //ログイン中のページ
 Route::get('/top','PostsController@index');
 
+Route::post('/post/create','PostsController@post');
+
 Route::get('/profile','UsersController@profile');
 
 Route::get('/search','UsersController@index');
@@ -39,5 +41,5 @@ Route::get('/search','UsersController@index');
 Route::get('/follow-list','PostsController@index');
 Route::get('/follower-list','PostsController@index');
 
-
-
+Route::get('/post/{id}/delete','PostsController@delete');
+Route::post('/post/update','PostsController@update');
